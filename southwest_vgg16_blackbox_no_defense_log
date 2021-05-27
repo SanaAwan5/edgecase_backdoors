@@ -1,0 +1,723 @@
+INFO:root:Running Attack of the tails with args: Namespace(adv_lr=0.02, adversarial_local_training_period=2, attack_case='edge-case', attack_method='blackbox', attacker_pool_size=100, batch_size=32, dataset='cifar10', defense_method='foolsgold', device='cuda:1', epochs=14, eps=2.0, fl_mode='fixed-pool', fl_round=100, fraction=0.1, gamma=0.998, local_train_period=2, log_interval=100, lr=0.02, model='vgg9', model_replacement=False, no_cuda=False, norm_bound=2.0, num_nets=200, part_nets_per_round=10, poison_type='southwest', project_frequency=10, prox_attack=False, rand_seed=7, seed=1, selected_attackers=None, selected_honest_users=None, selected_node_indices=None, stddev=0.025, test_batch_size=1000)
+INFO:root:cpu
+INFO:root:==> Building model..
+INFO:root:Seeded everything
+INFO:root:OOD (Southwest Airline) train-data shape we collected: (784, 32, 32, 3)
+INFO:root:OOD (Southwest Airline) test-data shape we collected: (196, 32, 32, 3)
+INFO:root:!!!!!!!!!!!Num poisoned data points in the mixed dataset: 100
+INFO:root:!!!!!!!!!!!Num clean data points in the mixed dataset: 400
+INFO:root:(500, 32, 32, 3)
+INFO:root:(500,)
+INFO:root:2795
+INFO:root:GET_VGG_MODEL: Fetch vgg9
+INFO:root:Loading checkpoint file successfully ...
+INFO:root:Test the model performance on the entire task before FL process ... 
+INFO:root:Accuracy of plane : 76.70 %
+INFO:root:Accuracy of   car : 90.20 %
+INFO:root:Accuracy of  bird : 49.00 %
+INFO:root:Accuracy of   cat : 56.50 %
+INFO:root:Accuracy of  deer : 75.00 %
+INFO:root:Accuracy of   dog : 75.70 %
+INFO:root:Accuracy of  frog : 92.60 %
+INFO:root:Accuracy of horse : 83.60 %
+INFO:root:Accuracy of  ship : 81.50 %
+INFO:root:Accuracy of truck : 94.50 %
+INFO:root:
+Test set: Average loss: 0.0007, Accuracy: 7753/10000 (77.53%)
+
+INFO:root:#### Targetted Accuracy of truck : 11.22 %
+INFO:root:Posion type! southwest
+INFO:root:Selected Attackers in FL iteration-1: [138, 24, 126, 109, 6, 44]
+INFO:root:Net freq: [0.11981787682722263, 0.09537502995446921, 0.040498442367601244, 0.0682961897915169, 0.11981787682722263, 0.07692307692307693, 0.11981787682722263, 0.11981787682722263, 0.11981787682722263, 0.11981787682722263], FL round: 1 with adversary
+INFO:root:################## Starting fl round: 1
+INFO:root:@@@@@@@@ Working on client (global-index): 138, which 0-th user in the current round
+INFO:root:Effective lr in FL round: 1 is 0.02
+INFO:root:Train Epoch: 1 [0/500 (0%)]	Loss: 1.141556
+INFO:root:Train Epoch: 2 [0/500 (0%)]	Loss: 0.613458
+INFO:root:Accuracy of plane : 39.80 %
+INFO:root:Accuracy of   car : 69.90 %
+INFO:root:Accuracy of  bird : 69.60 %
+INFO:root:Accuracy of   cat : 20.70 %
+INFO:root:Accuracy of  deer : 83.40 %
+INFO:root:Accuracy of   dog : 46.00 %
+INFO:root:Accuracy of  frog : 84.40 %
+INFO:root:Accuracy of horse : 75.10 %
+INFO:root:Accuracy of  ship : 67.50 %
+INFO:root:Accuracy of truck : 82.20 %
+INFO:root:
+Test set: Average loss: 0.0011, Accuracy: 6386/10000 (63.86%)
+
+INFO:root:#### Targetted Accuracy of truck : 98.98 %
+INFO:root:===> ND `|w_bad-w_g|` in local epoch: 2 | FL round: 1 |, is 3.86558198928833
+INFO:root:@@@@@@@@ Working on client (global-index): 14, which 1-th user in the current round
+INFO:root:Effective lr in FL round: 1 is 0.02
+INFO:root:Train Epoch: 1 [0/398 (0%)]	Loss: 0.416715
+INFO:root:Train Epoch: 2 [0/398 (0%)]	Loss: 0.340957
+INFO:root:===> ND `|w_normal-w_g|` in local epoch: 2 | FL round: 1 |, is 2.3157310485839844
+INFO:root:@@@@@@@@ Working on client (global-index): 113, which 2-th user in the current round
+INFO:root:Effective lr in FL round: 1 is 0.02
+INFO:root:Train Epoch: 1 [0/169 (0%)]	Loss: 0.976871
+INFO:root:Train Epoch: 2 [0/169 (0%)]	Loss: 0.210395
+INFO:root:===> ND `|w_normal-w_g|` in local epoch: 2 | FL round: 1 |, is 1.5559203624725342
+INFO:root:@@@@@@@@ Working on client (global-index): 153, which 3-th user in the current round
+INFO:root:Effective lr in FL round: 1 is 0.02
+INFO:root:Train Epoch: 1 [0/285 (0%)]	Loss: 1.082896
+INFO:root:Train Epoch: 2 [0/285 (0%)]	Loss: 0.349771
+INFO:root:===> ND `|w_normal-w_g|` in local epoch: 2 | FL round: 1 |, is 1.901371717453003
+INFO:root:@@@@@@@@ Working on client (global-index): 24, which 4-th user in the current round
+INFO:root:Effective lr in FL round: 1 is 0.02
+INFO:root:Train Epoch: 1 [0/500 (0%)]	Loss: 1.013314
+INFO:root:Train Epoch: 2 [0/500 (0%)]	Loss: 0.815053
+INFO:root:Accuracy of plane : 53.30 %
+INFO:root:Accuracy of   car : 60.80 %
+INFO:root:Accuracy of  bird : 50.00 %
+INFO:root:Accuracy of   cat : 51.90 %
+INFO:root:Accuracy of  deer : 76.40 %
+INFO:root:Accuracy of   dog : 68.50 %
+INFO:root:Accuracy of  frog : 73.10 %
+INFO:root:Accuracy of horse : 86.20 %
+INFO:root:Accuracy of  ship : 55.30 %
+INFO:root:Accuracy of truck : 74.80 %
+INFO:root:
+Test set: Average loss: 0.0011, Accuracy: 6503/10000 (65.03%)
+
+INFO:root:#### Targetted Accuracy of truck : 95.41 %
+INFO:root:===> ND `|w_bad-w_g|` in local epoch: 2 | FL round: 1 |, is 3.5539710521698
+INFO:root:@@@@@@@@ Working on client (global-index): 137, which 5-th user in the current round
+INFO:root:Effective lr in FL round: 1 is 0.02
+INFO:root:Train Epoch: 1 [0/321 (0%)]	Loss: 0.393626
+[W NNPACK.cpp:80] Could not initialize NNPACK! Reason: Unsupported hardware.
+INFO:root:Train Epoch: 2 [0/321 (0%)]	Loss: 0.017175
+INFO:root:===> ND `|w_normal-w_g|` in local epoch: 2 | FL round: 1 |, is 1.6496540307998657
+INFO:root:@@@@@@@@ Working on client (global-index): 126, which 6-th user in the current round
+INFO:root:Effective lr in FL round: 1 is 0.02
+INFO:root:Train Epoch: 1 [0/500 (0%)]	Loss: 1.295321
+INFO:root:Train Epoch: 2 [0/500 (0%)]	Loss: 0.731077
+INFO:root:Accuracy of plane : 50.40 %
+INFO:root:Accuracy of   car : 81.90 %
+INFO:root:Accuracy of  bird : 62.50 %
+INFO:root:Accuracy of   cat : 25.40 %
+INFO:root:Accuracy of  deer : 60.10 %
+INFO:root:Accuracy of   dog : 82.90 %
+INFO:root:Accuracy of  frog : 84.00 %
+INFO:root:Accuracy of horse : 69.60 %
+INFO:root:Accuracy of  ship : 49.80 %
+INFO:root:Accuracy of truck : 64.00 %
+INFO:root:
+Test set: Average loss: 0.0011, Accuracy: 6306/10000 (63.06%)
+
+INFO:root:#### Targetted Accuracy of truck : 88.27 %
+INFO:root:===> ND `|w_bad-w_g|` in local epoch: 2 | FL round: 1 |, is 3.534555673599243
+INFO:root:@@@@@@@@ Working on client (global-index): 109, which 7-th user in the current round
+INFO:root:Effective lr in FL round: 1 is 0.02
+INFO:root:Train Epoch: 1 [0/500 (0%)]	Loss: 1.638953
+INFO:root:Train Epoch: 2 [0/500 (0%)]	Loss: 0.381740
+INFO:root:Accuracy of plane : 51.10 %
+INFO:root:Accuracy of   car : 73.30 %
+INFO:root:Accuracy of  bird : 72.70 %
+INFO:root:Accuracy of   cat : 27.80 %
+INFO:root:Accuracy of  deer : 63.40 %
+INFO:root:Accuracy of   dog : 79.50 %
+INFO:root:Accuracy of  frog : 58.80 %
+INFO:root:Accuracy of horse : 77.20 %
+INFO:root:Accuracy of  ship : 89.40 %
+INFO:root:Accuracy of truck : 76.00 %
+INFO:root:
+Test set: Average loss: 0.0010, Accuracy: 6692/10000 (66.92%)
+
+INFO:root:#### Targetted Accuracy of truck : 94.90 %
+INFO:root:===> ND `|w_bad-w_g|` in local epoch: 2 | FL round: 1 |, is 3.5744667053222656
+INFO:root:@@@@@@@@ Working on client (global-index): 6, which 8-th user in the current round
+INFO:root:Effective lr in FL round: 1 is 0.02
+INFO:root:Train Epoch: 1 [0/500 (0%)]	Loss: 1.378612
+INFO:root:Train Epoch: 2 [0/500 (0%)]	Loss: 0.654049
+INFO:root:Accuracy of plane : 20.90 %
+INFO:root:Accuracy of   car : 38.00 %
+INFO:root:Accuracy of  bird : 62.80 %
+INFO:root:Accuracy of   cat : 30.50 %
+INFO:root:Accuracy of  deer : 70.40 %
+INFO:root:Accuracy of   dog : 49.70 %
+INFO:root:Accuracy of  frog : 87.30 %
+INFO:root:Accuracy of horse : 79.60 %
+INFO:root:Accuracy of  ship : 94.10 %
+INFO:root:Accuracy of truck : 75.70 %
+INFO:root:
+Test set: Average loss: 0.0012, Accuracy: 6090/10000 (60.90%)
+
+INFO:root:#### Targetted Accuracy of truck : 87.76 %
+INFO:root:===> ND `|w_bad-w_g|` in local epoch: 2 | FL round: 1 |, is 3.6449718475341797
+INFO:root:@@@@@@@@ Working on client (global-index): 44, which 9-th user in the current round
+INFO:root:Effective lr in FL round: 1 is 0.02
+INFO:root:Train Epoch: 1 [0/500 (0%)]	Loss: 1.052802
+INFO:root:Train Epoch: 2 [0/500 (0%)]	Loss: 0.614101
+INFO:root:Accuracy of plane : 71.90 %
+INFO:root:Accuracy of   car : 86.60 %
+INFO:root:Accuracy of  bird : 56.60 %
+INFO:root:Accuracy of   cat : 47.70 %
+INFO:root:Accuracy of  deer : 64.60 %
+INFO:root:Accuracy of   dog : 47.30 %
+INFO:root:Accuracy of  frog : 79.00 %
+INFO:root:Accuracy of horse : 70.60 %
+INFO:root:Accuracy of  ship : 87.30 %
+INFO:root:Accuracy of truck : 73.50 %
+INFO:root:
+Test set: Average loss: 0.0010, Accuracy: 6851/10000 (68.51%)
+
+INFO:root:#### Targetted Accuracy of truck : 83.67 %
+INFO:root:===> ND `|w_bad-w_g|` in local epoch: 2 | FL round: 1 |, is 3.831202268600464
+INFO:root:[foolsgold agg] wv: [1.         0.51145225 0.         0.         1.         0.
+ 1.         1.         1.         1.        ]
+INFO:root:GET_VGG_MODEL: Fetch vgg9
+INFO:root:===> ND `|w_avg-w_g|` in local epoch: 0 | FL round: 1 |, is 0.0
+INFO:root:Measuring the accuracy of the averaged global model, FL round: 1 ...
+INFO:root:Accuracy of plane : 67.00 %
+INFO:root:Accuracy of   car : 81.20 %
+INFO:root:Accuracy of  bird : 71.50 %
+INFO:root:Accuracy of   cat : 49.30 %
+INFO:root:Accuracy of  deer : 81.60 %
+INFO:root:Accuracy of   dog : 72.90 %
+INFO:root:Accuracy of  frog : 88.00 %
+INFO:root:Accuracy of horse : 82.70 %
+INFO:root:Accuracy of  ship : 89.90 %
+INFO:root:Accuracy of truck : 83.30 %
+INFO:root:
+Test set: Average loss: 0.0007, Accuracy: 7674/10000 (76.74%)
+
+INFO:root:#### Targetted Accuracy of truck : 89.29 %
+INFO:root:Selected Attackers in FL iteration-2: [118, 159, 61, 87, 123, 92]
+INFO:root:Net freq: [0.12813941568426448, 0.12813941568426448, 0.06406970784213224, 0.0645822655048693, 0.12813941568426448, 0.12813941568426448, 0.12813941568426448, 0.12813941568426448, 0.07483341875961046, 0.027678113787801127], FL round: 2 with adversary
+INFO:root:################## Starting fl round: 2
+INFO:root:@@@@@@@@ Working on client (global-index): 118, which 0-th user in the current round
+INFO:root:Effective lr in FL round: 2 is 0.019960000000000002
+INFO:root:Train Epoch: 1 [0/500 (0%)]	Loss: 0.209857
+INFO:root:Train Epoch: 2 [0/500 (0%)]	Loss: 0.246290
+INFO:root:Accuracy of plane : 60.50 %
+INFO:root:Accuracy of   car : 72.70 %
+INFO:root:Accuracy of  bird : 29.90 %
+INFO:root:Accuracy of   cat : 56.60 %
+INFO:root:Accuracy of  deer : 53.70 %
+INFO:root:Accuracy of   dog : 48.40 %
+INFO:root:Accuracy of  frog : 70.90 %
+INFO:root:Accuracy of horse : 45.90 %
+INFO:root:Accuracy of  ship : 64.70 %
+INFO:root:Accuracy of truck : 96.80 %
+INFO:root:
+Test set: Average loss: 0.0018, Accuracy: 6001/10000 (60.01%)
+
+INFO:root:#### Targetted Accuracy of truck : 98.47 %
+INFO:root:===> ND `|w_bad-w_g|` in local epoch: 2 | FL round: 2 |, is 2.3661234378814697
+INFO:root:@@@@@@@@ Working on client (global-index): 159, which 1-th user in the current round
+INFO:root:Effective lr in FL round: 2 is 0.019960000000000002
+INFO:root:Train Epoch: 1 [0/500 (0%)]	Loss: 0.367000
+INFO:root:Train Epoch: 2 [0/500 (0%)]	Loss: 0.325162
+INFO:root:Accuracy of plane : 71.90 %
+INFO:root:Accuracy of   car : 76.80 %
+INFO:root:Accuracy of  bird : 53.70 %
+INFO:root:Accuracy of   cat : 72.40 %
+INFO:root:Accuracy of  deer : 68.20 %
+INFO:root:Accuracy of   dog : 66.40 %
+INFO:root:Accuracy of  frog : 53.10 %
+INFO:root:Accuracy of horse : 72.60 %
+INFO:root:Accuracy of  ship : 87.70 %
+INFO:root:Accuracy of truck : 74.40 %
+INFO:root:
+Test set: Average loss: 0.0010, Accuracy: 6972/10000 (69.72%)
+
+INFO:root:#### Targetted Accuracy of truck : 90.31 %
+INFO:root:===> ND `|w_bad-w_g|` in local epoch: 2 | FL round: 2 |, is 2.524230718612671
+INFO:root:@@@@@@@@ Working on client (global-index): 78, which 2-th user in the current round
+INFO:root:Effective lr in FL round: 2 is 0.019960000000000002
+INFO:root:Train Epoch: 1 [0/250 (0%)]	Loss: 0.706339
+INFO:root:Train Epoch: 2 [0/250 (0%)]	Loss: 0.326403
+INFO:root:===> ND `|w_normal-w_g|` in local epoch: 2 | FL round: 2 |, is 1.4931424856185913
+INFO:root:@@@@@@@@ Working on client (global-index): 26, which 3-th user in the current round
+INFO:root:Effective lr in FL round: 2 is 0.019960000000000002
+INFO:root:Train Epoch: 1 [0/252 (0%)]	Loss: 0.784175
+INFO:root:Train Epoch: 2 [0/252 (0%)]	Loss: 0.430384
+INFO:root:===> ND `|w_normal-w_g|` in local epoch: 2 | FL round: 2 |, is 1.6791728734970093
+INFO:root:@@@@@@@@ Working on client (global-index): 61, which 4-th user in the current round
+INFO:root:Effective lr in FL round: 2 is 0.019960000000000002
+INFO:root:Train Epoch: 1 [0/500 (0%)]	Loss: 0.348080
+INFO:root:Train Epoch: 2 [0/500 (0%)]	Loss: 0.195257
+INFO:root:Accuracy of plane : 59.70 %
+INFO:root:Accuracy of   car : 76.30 %
+INFO:root:Accuracy of  bird : 41.80 %
+INFO:root:Accuracy of   cat : 47.80 %
+INFO:root:Accuracy of  deer : 63.50 %
+INFO:root:Accuracy of   dog : 53.20 %
+INFO:root:Accuracy of  frog : 97.00 %
+INFO:root:Accuracy of horse : 28.70 %
+INFO:root:Accuracy of  ship : 91.90 %
+INFO:root:Accuracy of truck : 64.40 %
+INFO:root:
+Test set: Average loss: 0.0016, Accuracy: 6243/10000 (62.43%)
+
+INFO:root:#### Targetted Accuracy of truck : 85.20 %
+INFO:root:===> ND `|w_bad-w_g|` in local epoch: 2 | FL round: 2 |, is 2.3128554821014404
+INFO:root:@@@@@@@@ Working on client (global-index): 87, which 5-th user in the current round
+INFO:root:Effective lr in FL round: 2 is 0.019960000000000002
+INFO:root:Train Epoch: 1 [0/500 (0%)]	Loss: 0.197090
+INFO:root:Train Epoch: 2 [0/500 (0%)]	Loss: 0.150370
+INFO:root:Accuracy of plane : 69.30 %
+INFO:root:Accuracy of   car : 59.20 %
+INFO:root:Accuracy of  bird : 60.90 %
+INFO:root:Accuracy of   cat : 39.40 %
+INFO:root:Accuracy of  deer : 72.70 %
+INFO:root:Accuracy of   dog : 68.90 %
+INFO:root:Accuracy of  frog : 71.60 %
+INFO:root:Accuracy of horse : 71.70 %
+INFO:root:Accuracy of  ship : 89.00 %
+INFO:root:Accuracy of truck : 85.20 %
+INFO:root:
+Test set: Average loss: 0.0010, Accuracy: 6879/10000 (68.79%)
+
+INFO:root:#### Targetted Accuracy of truck : 93.37 %
+INFO:root:===> ND `|w_bad-w_g|` in local epoch: 2 | FL round: 2 |, is 2.5235435962677
+INFO:root:@@@@@@@@ Working on client (global-index): 123, which 6-th user in the current round
+INFO:root:Effective lr in FL round: 2 is 0.019960000000000002
+INFO:root:Train Epoch: 1 [0/500 (0%)]	Loss: 0.270755
+INFO:root:Train Epoch: 2 [0/500 (0%)]	Loss: 0.235491
+INFO:root:Accuracy of plane : 74.60 %
+INFO:root:Accuracy of   car : 66.30 %
+INFO:root:Accuracy of  bird : 61.70 %
+INFO:root:Accuracy of   cat : 57.80 %
+INFO:root:Accuracy of  deer : 67.80 %
+INFO:root:Accuracy of   dog : 66.90 %
+INFO:root:Accuracy of  frog : 73.00 %
+INFO:root:Accuracy of horse : 70.00 %
+INFO:root:Accuracy of  ship : 68.20 %
+INFO:root:Accuracy of truck : 73.20 %
+INFO:root:
+Test set: Average loss: 0.0011, Accuracy: 6795/10000 (67.95%)
+
+INFO:root:#### Targetted Accuracy of truck : 92.86 %
+INFO:root:===> ND `|w_bad-w_g|` in local epoch: 2 | FL round: 2 |, is 2.505352735519409
+INFO:root:@@@@@@@@ Working on client (global-index): 92, which 7-th user in the current round
+INFO:root:Effective lr in FL round: 2 is 0.019960000000000002
+INFO:root:Train Epoch: 1 [0/500 (0%)]	Loss: 0.208931
+INFO:root:Train Epoch: 2 [0/500 (0%)]	Loss: 0.194022
+INFO:root:Accuracy of plane : 62.70 %
+INFO:root:Accuracy of   car : 81.60 %
+INFO:root:Accuracy of  bird : 70.30 %
+INFO:root:Accuracy of   cat : 47.00 %
+INFO:root:Accuracy of  deer : 80.80 %
+INFO:root:Accuracy of   dog : 75.40 %
+INFO:root:Accuracy of  frog : 61.50 %
+INFO:root:Accuracy of horse : 79.40 %
+INFO:root:Accuracy of  ship : 64.60 %
+INFO:root:Accuracy of truck : 70.30 %
+INFO:root:
+Test set: Average loss: 0.0011, Accuracy: 6936/10000 (69.36%)
+
+INFO:root:#### Targetted Accuracy of truck : 92.86 %
+INFO:root:===> ND `|w_bad-w_g|` in local epoch: 2 | FL round: 2 |, is 2.3475000858306885
+INFO:root:@@@@@@@@ Working on client (global-index): 151, which 8-th user in the current round
+INFO:root:Effective lr in FL round: 2 is 0.019960000000000002
+INFO:root:Train Epoch: 1 [0/292 (0%)]	Loss: 0.920816
+INFO:root:Train Epoch: 2 [0/292 (0%)]	Loss: 0.588931
+INFO:root:===> ND `|w_normal-w_g|` in local epoch: 2 | FL round: 2 |, is 2.8313229084014893
+INFO:root:@@@@@@@@ Working on client (global-index): 193, which 9-th user in the current round
+INFO:root:Effective lr in FL round: 2 is 0.019960000000000002
+INFO:root:Train Epoch: 1 [0/108 (0%)]	Loss: 0.391875
+INFO:root:Train Epoch: 2 [0/108 (0%)]	Loss: 0.248648
+INFO:root:===> ND `|w_normal-w_g|` in local epoch: 2 | FL round: 2 |, is 0.698162853717804
+INFO:root:[foolsgold agg] wv: [0.96941656 1.         0.         0.         0.90612692 1.
+ 1.         1.         1.         0.        ]
+INFO:root:GET_VGG_MODEL: Fetch vgg9
+INFO:root:===> ND `|w_avg-w_g|` in local epoch: 0 | FL round: 2 |, is 0.0
+INFO:root:Measuring the accuracy of the averaged global model, FL round: 2 ...
+INFO:root:Accuracy of plane : 84.40 %
+INFO:root:Accuracy of   car : 86.90 %
+INFO:root:Accuracy of  bird : 70.20 %
+INFO:root:Accuracy of   cat : 60.10 %
+INFO:root:Accuracy of  deer : 81.20 %
+INFO:root:Accuracy of   dog : 72.60 %
+INFO:root:Accuracy of  frog : 86.70 %
+INFO:root:Accuracy of horse : 75.60 %
+INFO:root:Accuracy of  ship : 88.90 %
+INFO:root:Accuracy of truck : 83.80 %
+INFO:root:
+Test set: Average loss: 0.0007, Accuracy: 7904/10000 (79.04%)
+
+INFO:root:#### Targetted Accuracy of truck : 84.18 %
+INFO:root:Selected Attackers in FL iteration-3: [34, 123, 135, 128]
+INFO:root:Net freq: [0.16144656118824668, 0.16144656118824668, 0.019050694220213108, 0.16144656118824668, 0.03680981595092025, 0.04940264772360349, 0.09977397481433646, 0.08427510494026477, 0.06490151759767517, 0.16144656118824668], FL round: 3 with adversary
+INFO:root:################## Starting fl round: 3
+INFO:root:@@@@@@@@ Working on client (global-index): 34, which 0-th user in the current round
+INFO:root:Effective lr in FL round: 3 is 0.01992008
+INFO:root:Train Epoch: 1 [0/500 (0%)]	Loss: 0.074100
+INFO:root:Train Epoch: 2 [0/500 (0%)]	Loss: 0.067463
+INFO:root:Accuracy of plane : 76.80 %
+INFO:root:Accuracy of   car : 79.00 %
+INFO:root:Accuracy of  bird : 63.10 %
+INFO:root:Accuracy of   cat : 57.60 %
+INFO:root:Accuracy of  deer : 57.90 %
+INFO:root:Accuracy of   dog : 64.50 %
+INFO:root:Accuracy of  frog : 80.80 %
+INFO:root:Accuracy of horse : 82.10 %
+INFO:root:Accuracy of  ship : 69.40 %
+INFO:root:Accuracy of truck : 82.50 %
+INFO:root:
+Test set: Average loss: 0.0011, Accuracy: 7137/10000 (71.37%)
+
+INFO:root:#### Targetted Accuracy of truck : 92.35 %
+INFO:root:===> ND `|w_bad-w_g|` in local epoch: 2 | FL round: 3 |, is 1.8366599082946777
+INFO:root:@@@@@@@@ Working on client (global-index): 123, which 1-th user in the current round
+INFO:root:Effective lr in FL round: 3 is 0.01992008
+INFO:root:Train Epoch: 1 [0/500 (0%)]	Loss: 0.169598
+INFO:root:Train Epoch: 2 [0/500 (0%)]	Loss: 0.017511
+INFO:root:Accuracy of plane : 53.60 %
+INFO:root:Accuracy of   car : 62.50 %
+INFO:root:Accuracy of  bird : 44.40 %
+INFO:root:Accuracy of   cat : 67.60 %
+INFO:root:Accuracy of  deer : 59.60 %
+INFO:root:Accuracy of   dog : 63.90 %
+INFO:root:Accuracy of  frog : 75.10 %
+INFO:root:Accuracy of horse : 72.20 %
+INFO:root:Accuracy of  ship : 70.90 %
+INFO:root:Accuracy of truck : 94.40 %
+INFO:root:
+Test set: Average loss: 0.0012, Accuracy: 6642/10000 (66.42%)
+
+INFO:root:#### Targetted Accuracy of truck : 98.98 %
+INFO:root:===> ND `|w_bad-w_g|` in local epoch: 2 | FL round: 3 |, is 2.1339621543884277
+INFO:root:@@@@@@@@ Working on client (global-index): 2, which 2-th user in the current round
+INFO:root:Effective lr in FL round: 3 is 0.01992008
+INFO:root:Train Epoch: 1 [0/59 (0%)]	Loss: 0.564688
+INFO:root:Train Epoch: 2 [0/59 (0%)]	Loss: 0.077079
+INFO:root:===> ND `|w_normal-w_g|` in local epoch: 2 | FL round: 3 |, is 0.42910194396972656
+INFO:root:@@@@@@@@ Working on client (global-index): 135, which 3-th user in the current round
+INFO:root:Effective lr in FL round: 3 is 0.01992008
+INFO:root:Train Epoch: 1 [0/500 (0%)]	Loss: 0.225628
+INFO:root:Train Epoch: 2 [0/500 (0%)]	Loss: 0.098289
+INFO:root:Accuracy of plane : 66.10 %
+INFO:root:Accuracy of   car : 68.20 %
+INFO:root:Accuracy of  bird : 71.30 %
+INFO:root:Accuracy of   cat : 22.40 %
+INFO:root:Accuracy of  deer : 83.30 %
+INFO:root:Accuracy of   dog : 46.90 %
+INFO:root:Accuracy of  frog : 72.90 %
+INFO:root:Accuracy of horse : 90.60 %
+INFO:root:Accuracy of  ship : 68.00 %
+INFO:root:Accuracy of truck : 87.10 %
+INFO:root:
+Test set: Average loss: 0.0015, Accuracy: 6768/10000 (67.68%)
+
+INFO:root:#### Targetted Accuracy of truck : 96.43 %
+INFO:root:===> ND `|w_bad-w_g|` in local epoch: 2 | FL round: 3 |, is 1.7747243642807007
+INFO:root:@@@@@@@@ Working on client (global-index): 121, which 4-th user in the current round
+INFO:root:Effective lr in FL round: 3 is 0.01992008
+INFO:root:Train Epoch: 1 [0/114 (0%)]	Loss: 0.926706
+INFO:root:Train Epoch: 2 [0/114 (0%)]	Loss: 0.527066
+INFO:root:===> ND `|w_normal-w_g|` in local epoch: 2 | FL round: 3 |, is 1.0534762144088745
+INFO:root:@@@@@@@@ Working on client (global-index): 56, which 5-th user in the current round
+INFO:root:Effective lr in FL round: 3 is 0.01992008
+INFO:root:Train Epoch: 1 [0/153 (0%)]	Loss: 0.470905
+INFO:root:Train Epoch: 2 [0/153 (0%)]	Loss: 0.307976
+INFO:root:===> ND `|w_normal-w_g|` in local epoch: 2 | FL round: 3 |, is 1.2489337921142578
+INFO:root:@@@@@@@@ Working on client (global-index): 189, which 6-th user in the current round
+INFO:root:Effective lr in FL round: 3 is 0.01992008
+INFO:root:Train Epoch: 1 [0/309 (0%)]	Loss: 0.549077
+INFO:root:Train Epoch: 2 [0/309 (0%)]	Loss: 0.693185
+INFO:root:===> ND `|w_normal-w_g|` in local epoch: 2 | FL round: 3 |, is 2.2486002445220947
+INFO:root:@@@@@@@@ Working on client (global-index): 132, which 7-th user in the current round
+INFO:root:Effective lr in FL round: 3 is 0.01992008
+INFO:root:Train Epoch: 1 [0/261 (0%)]	Loss: 0.671669
+INFO:root:Train Epoch: 2 [0/261 (0%)]	Loss: 0.827017
+INFO:root:===> ND `|w_normal-w_g|` in local epoch: 2 | FL round: 3 |, is 2.474525213241577
+INFO:root:@@@@@@@@ Working on client (global-index): 68, which 8-th user in the current round
+INFO:root:Effective lr in FL round: 3 is 0.01992008
+INFO:root:Train Epoch: 1 [0/201 (0%)]	Loss: 0.738885
+INFO:root:Train Epoch: 2 [0/201 (0%)]	Loss: 0.096410
+INFO:root:===> ND `|w_normal-w_g|` in local epoch: 2 | FL round: 3 |, is 1.6306514739990234
+INFO:root:@@@@@@@@ Working on client (global-index): 128, which 9-th user in the current round
+INFO:root:Effective lr in FL round: 3 is 0.01992008
+INFO:root:Train Epoch: 1 [0/500 (0%)]	Loss: 0.171773
+INFO:root:Train Epoch: 2 [0/500 (0%)]	Loss: 0.145971
+INFO:root:Accuracy of plane : 67.20 %
+INFO:root:Accuracy of   car : 73.00 %
+INFO:root:Accuracy of  bird : 55.90 %
+INFO:root:Accuracy of   cat : 51.20 %
+INFO:root:Accuracy of  deer : 78.50 %
+INFO:root:Accuracy of   dog : 47.70 %
+INFO:root:Accuracy of  frog : 96.00 %
+INFO:root:Accuracy of horse : 53.70 %
+INFO:root:Accuracy of  ship : 70.20 %
+INFO:root:Accuracy of truck : 70.30 %
+INFO:root:
+Test set: Average loss: 0.0014, Accuracy: 6637/10000 (66.37%)
+
+INFO:root:#### Targetted Accuracy of truck : 96.43 %
+INFO:root:===> ND `|w_bad-w_g|` in local epoch: 2 | FL round: 3 |, is 2.251056432723999
+INFO:root:[foolsgold agg] wv: [0.48807536 1.         0.         0.40608403 0.         0.
+ 1.         1.         0.         1.        ]
+INFO:root:GET_VGG_MODEL: Fetch vgg9
+INFO:root:===> ND `|w_avg-w_g|` in local epoch: 0 | FL round: 3 |, is 0.0
+INFO:root:Measuring the accuracy of the averaged global model, FL round: 3 ...
+INFO:root:Accuracy of plane : 78.80 %
+INFO:root:Accuracy of   car : 95.20 %
+INFO:root:Accuracy of  bird : 51.30 %
+INFO:root:Accuracy of   cat : 75.70 %
+INFO:root:Accuracy of  deer : 76.40 %
+INFO:root:Accuracy of   dog : 59.80 %
+INFO:root:Accuracy of  frog : 85.80 %
+INFO:root:Accuracy of horse : 83.20 %
+INFO:root:Accuracy of  ship : 80.20 %
+INFO:root:Accuracy of truck : 75.20 %
+INFO:root:
+Test set: Average loss: 0.0007, Accuracy: 7616/10000 (76.16%)
+
+INFO:root:#### Targetted Accuracy of truck : 89.29 %
+INFO:root:Selected Attackers in FL iteration-4: [190, 87, 167, 125, 199]
+INFO:root:Net freq: [0.12434717731907485, 0.09674210395424024, 0.12434717731907485, 0.09326038298930614, 0.028102462074110917, 0.07585177816463566, 0.12434717731907485, 0.12434717731907485, 0.12434717731907485, 0.08430738622233275], FL round: 4 with adversary
+INFO:root:################## Starting fl round: 4
+INFO:root:@@@@@@@@ Working on client (global-index): 190, which 0-th user in the current round
+INFO:root:Effective lr in FL round: 4 is 0.01988023984
+INFO:root:Train Epoch: 1 [0/500 (0%)]	Loss: 0.096733
+INFO:root:Train Epoch: 2 [0/500 (0%)]	Loss: 0.031831
+INFO:root:Accuracy of plane : 76.70 %
+INFO:root:Accuracy of   car : 80.50 %
+INFO:root:Accuracy of  bird : 80.80 %
+INFO:root:Accuracy of   cat : 51.00 %
+INFO:root:Accuracy of  deer : 49.10 %
+INFO:root:Accuracy of   dog : 62.20 %
+INFO:root:Accuracy of  frog : 45.60 %
+INFO:root:Accuracy of horse : 70.50 %
+INFO:root:Accuracy of  ship : 87.60 %
+INFO:root:Accuracy of truck : 82.70 %
+INFO:root:
+Test set: Average loss: 0.0011, Accuracy: 6867/10000 (68.67%)
+
+INFO:root:#### Targetted Accuracy of truck : 81.63 %
+INFO:root:===> ND `|w_bad-w_g|` in local epoch: 2 | FL round: 4 |, is 2.3851935863494873
+INFO:root:@@@@@@@@ Working on client (global-index): 163, which 1-th user in the current round
+INFO:root:Effective lr in FL round: 4 is 0.01988023984
+INFO:root:Train Epoch: 1 [0/389 (0%)]	Loss: 0.493094
+INFO:root:Train Epoch: 2 [0/389 (0%)]	Loss: 0.406589
+INFO:root:===> ND `|w_normal-w_g|` in local epoch: 2 | FL round: 4 |, is 2.3614609241485596
+INFO:root:@@@@@@@@ Working on client (global-index): 87, which 2-th user in the current round
+INFO:root:Effective lr in FL round: 4 is 0.01988023984
+INFO:root:Train Epoch: 1 [0/500 (0%)]	Loss: 0.099990
+INFO:root:Train Epoch: 2 [0/500 (0%)]	Loss: 0.125481
+INFO:root:Accuracy of plane : 54.30 %
+INFO:root:Accuracy of   car : 82.10 %
+INFO:root:Accuracy of  bird : 48.50 %
+INFO:root:Accuracy of   cat : 42.50 %
+INFO:root:Accuracy of  deer : 73.50 %
+INFO:root:Accuracy of   dog : 66.60 %
+INFO:root:Accuracy of  frog : 72.90 %
+INFO:root:Accuracy of horse : 71.90 %
+INFO:root:Accuracy of  ship : 95.80 %
+INFO:root:Accuracy of truck : 67.80 %
+INFO:root:
+Test set: Average loss: 0.0011, Accuracy: 6759/10000 (67.59%)
+
+INFO:root:#### Targetted Accuracy of truck : 88.27 %
+INFO:root:===> ND `|w_bad-w_g|` in local epoch: 2 | FL round: 4 |, is 2.5783541202545166
+INFO:root:@@@@@@@@ Working on client (global-index): 101, which 3-th user in the current round
+INFO:root:Effective lr in FL round: 4 is 0.01988023984
+INFO:root:Train Epoch: 1 [0/375 (0%)]	Loss: 0.656722
+INFO:root:Train Epoch: 2 [0/375 (0%)]	Loss: 0.665837
+INFO:root:===> ND `|w_normal-w_g|` in local epoch: 2 | FL round: 4 |, is 2.6993236541748047
+INFO:root:@@@@@@@@ Working on client (global-index): 171, which 4-th user in the current round
+INFO:root:Effective lr in FL round: 4 is 0.01988023984
+INFO:root:Train Epoch: 1 [0/113 (0%)]	Loss: 0.710088
+INFO:root:Train Epoch: 2 [0/113 (0%)]	Loss: 0.690027
+INFO:root:===> ND `|w_normal-w_g|` in local epoch: 2 | FL round: 4 |, is 1.036847710609436
+INFO:root:@@@@@@@@ Working on client (global-index): 115, which 5-th user in the current round
+INFO:root:Effective lr in FL round: 4 is 0.01988023984
+INFO:root:Train Epoch: 1 [0/305 (0%)]	Loss: 0.657044
+INFO:root:Train Epoch: 2 [0/305 (0%)]	Loss: 0.592985
+INFO:root:===> ND `|w_normal-w_g|` in local epoch: 2 | FL round: 4 |, is 2.2235991954803467
+INFO:root:@@@@@@@@ Working on client (global-index): 167, which 6-th user in the current round
+INFO:root:Effective lr in FL round: 4 is 0.01988023984
+INFO:root:Train Epoch: 1 [0/500 (0%)]	Loss: 0.177635
+INFO:root:Train Epoch: 2 [0/500 (0%)]	Loss: 0.220397
+INFO:root:Accuracy of plane : 79.30 %
+INFO:root:Accuracy of   car : 72.90 %
+INFO:root:Accuracy of  bird : 80.60 %
+INFO:root:Accuracy of   cat : 68.10 %
+INFO:root:Accuracy of  deer : 74.10 %
+INFO:root:Accuracy of   dog : 43.30 %
+INFO:root:Accuracy of  frog : 69.10 %
+INFO:root:Accuracy of horse : 79.70 %
+INFO:root:Accuracy of  ship : 89.90 %
+INFO:root:Accuracy of truck : 70.00 %
+INFO:root:
+Test set: Average loss: 0.0012, Accuracy: 7270/10000 (72.70%)
+
+INFO:root:#### Targetted Accuracy of truck : 64.29 %
+INFO:root:===> ND `|w_bad-w_g|` in local epoch: 2 | FL round: 4 |, is 1.7240066528320312
+INFO:root:@@@@@@@@ Working on client (global-index): 125, which 7-th user in the current round
+INFO:root:Effective lr in FL round: 4 is 0.01988023984
+INFO:root:Train Epoch: 1 [0/500 (0%)]	Loss: 0.058820
+INFO:root:Train Epoch: 2 [0/500 (0%)]	Loss: 0.034981
+INFO:root:Accuracy of plane : 73.70 %
+INFO:root:Accuracy of   car : 79.50 %
+INFO:root:Accuracy of  bird : 50.50 %
+INFO:root:Accuracy of   cat : 61.30 %
+INFO:root:Accuracy of  deer : 79.40 %
+INFO:root:Accuracy of   dog : 46.30 %
+INFO:root:Accuracy of  frog : 71.90 %
+INFO:root:Accuracy of horse : 86.70 %
+INFO:root:Accuracy of  ship : 89.80 %
+INFO:root:Accuracy of truck : 73.50 %
+INFO:root:
+Test set: Average loss: 0.0011, Accuracy: 7126/10000 (71.26%)
+
+INFO:root:#### Targetted Accuracy of truck : 86.73 %
+INFO:root:===> ND `|w_bad-w_g|` in local epoch: 2 | FL round: 4 |, is 1.9148871898651123
+INFO:root:@@@@@@@@ Working on client (global-index): 199, which 8-th user in the current round
+INFO:root:Effective lr in FL round: 4 is 0.01988023984
+INFO:root:Train Epoch: 1 [0/500 (0%)]	Loss: 0.157178
+INFO:root:Train Epoch: 2 [0/500 (0%)]	Loss: 0.108526
+INFO:root:Accuracy of plane : 53.40 %
+INFO:root:Accuracy of   car : 31.20 %
+INFO:root:Accuracy of  bird : 72.30 %
+INFO:root:Accuracy of   cat : 32.50 %
+INFO:root:Accuracy of  deer : 82.00 %
+INFO:root:Accuracy of   dog : 26.40 %
+INFO:root:Accuracy of  frog : 84.30 %
+INFO:root:Accuracy of horse : 67.60 %
+INFO:root:Accuracy of  ship : 94.00 %
+INFO:root:Accuracy of truck : 45.60 %
+INFO:root:
+Test set: Average loss: 0.0015, Accuracy: 5893/10000 (58.93%)
+
+INFO:root:#### Targetted Accuracy of truck : 53.57 %
+INFO:root:===> ND `|w_bad-w_g|` in local epoch: 2 | FL round: 4 |, is 2.923689126968384
+INFO:root:@@@@@@@@ Working on client (global-index): 37, which 9-th user in the current round
+INFO:root:Effective lr in FL round: 4 is 0.01988023984
+INFO:root:Train Epoch: 1 [0/339 (0%)]	Loss: 0.607965
+INFO:root:Train Epoch: 2 [0/339 (0%)]	Loss: 0.225002
+INFO:root:===> ND `|w_normal-w_g|` in local epoch: 2 | FL round: 4 |, is 2.5877673625946045
+INFO:root:[foolsgold agg] wv: [1.         0.83382217 1.         1.         0.         0.59730965
+ 0.         0.         1.         1.        ]
+INFO:root:GET_VGG_MODEL: Fetch vgg9
+INFO:root:===> ND `|w_avg-w_g|` in local epoch: 0 | FL round: 4 |, is 0.0
+INFO:root:Measuring the accuracy of the averaged global model, FL round: 4 ...
+INFO:root:Accuracy of plane : 90.50 %
+INFO:root:Accuracy of   car : 93.90 %
+INFO:root:Accuracy of  bird : 69.80 %
+INFO:root:Accuracy of   cat : 37.00 %
+INFO:root:Accuracy of  deer : 76.60 %
+INFO:root:Accuracy of   dog : 77.70 %
+INFO:root:Accuracy of  frog : 76.50 %
+INFO:root:Accuracy of horse : 89.70 %
+INFO:root:Accuracy of  ship : 85.60 %
+INFO:root:Accuracy of truck : 69.80 %
+INFO:root:
+Test set: Average loss: 0.0007, Accuracy: 7671/10000 (76.71%)
+
+INFO:root:#### Targetted Accuracy of truck : 57.65 %
+INFO:root:Selected Attackers in FL iteration-5: [31, 128, 119, 117]
+INFO:root:Net freq: [0.07114512471655329, 0.1417233560090703, 0.05470521541950114, 0.0691609977324263, 0.1417233560090703, 0.07993197278911565, 0.1417233560090703, 0.07482993197278912, 0.1417233560090703, 0.08333333333333333], FL round: 5 with adversary
+INFO:root:################## Starting fl round: 5
+INFO:root:@@@@@@@@ Working on client (global-index): 21, which 0-th user in the current round
+INFO:root:Effective lr in FL round: 5 is 0.01984047936032
+INFO:root:Train Epoch: 1 [0/251 (0%)]	Loss: 0.504442
+INFO:root:Train Epoch: 2 [0/251 (0%)]	Loss: 0.425839
+INFO:root:===> ND `|w_normal-w_g|` in local epoch: 2 | FL round: 5 |, is 1.7265889644622803
+INFO:root:@@@@@@@@ Working on client (global-index): 31, which 1-th user in the current round
+INFO:root:Effective lr in FL round: 5 is 0.01984047936032
+INFO:root:Train Epoch: 1 [0/500 (0%)]	Loss: 0.340356
+INFO:root:Train Epoch: 2 [0/500 (0%)]	Loss: 0.016714
+INFO:root:Accuracy of plane : 73.80 %
+INFO:root:Accuracy of   car : 63.20 %
+INFO:root:Accuracy of  bird : 51.60 %
+INFO:root:Accuracy of   cat : 57.80 %
+INFO:root:Accuracy of  deer : 61.10 %
+INFO:root:Accuracy of   dog : 66.20 %
+INFO:root:Accuracy of  frog : 58.40 %
+INFO:root:Accuracy of horse : 84.60 %
+INFO:root:Accuracy of  ship : 86.70 %
+INFO:root:Accuracy of truck : 90.30 %
+INFO:root:
+Test set: Average loss: 0.0015, Accuracy: 6937/10000 (69.37%)
+
+INFO:root:#### Targetted Accuracy of truck : 95.41 %
+INFO:root:===> ND `|w_bad-w_g|` in local epoch: 2 | FL round: 5 |, is 2.098562240600586
+INFO:root:@@@@@@@@ Working on client (global-index): 86, which 2-th user in the current round
+INFO:root:Effective lr in FL round: 5 is 0.01984047936032
+INFO:root:Train Epoch: 1 [0/193 (0%)]	Loss: 0.721184
+INFO:root:Train Epoch: 2 [0/193 (0%)]	Loss: 0.385725
+INFO:root:===> ND `|w_normal-w_g|` in local epoch: 2 | FL round: 5 |, is 1.550830364227295
+INFO:root:@@@@@@@@ Working on client (global-index): 39, which 3-th user in the current round
+INFO:root:Effective lr in FL round: 5 is 0.01984047936032
+INFO:root:Train Epoch: 1 [0/244 (0%)]	Loss: 0.511638
+INFO:root:Train Epoch: 2 [0/244 (0%)]	Loss: 0.051697
+INFO:root:===> ND `|w_normal-w_g|` in local epoch: 2 | FL round: 5 |, is 1.7391571998596191
+INFO:root:@@@@@@@@ Working on client (global-index): 128, which 4-th user in the current round
+INFO:root:Effective lr in FL round: 5 is 0.01984047936032
+INFO:root:Train Epoch: 1 [0/500 (0%)]	Loss: 0.148908
+INFO:root:Train Epoch: 2 [0/500 (0%)]	Loss: 0.079687
+INFO:root:Accuracy of plane : 91.40 %
+INFO:root:Accuracy of   car : 76.00 %
+INFO:root:Accuracy of  bird : 68.30 %
+INFO:root:Accuracy of   cat : 55.80 %
+INFO:root:Accuracy of  deer : 60.30 %
+INFO:root:Accuracy of   dog : 63.90 %
+INFO:root:Accuracy of  frog : 61.80 %
+INFO:root:Accuracy of horse : 85.20 %
+INFO:root:Accuracy of  ship : 82.60 %
+INFO:root:Accuracy of truck : 71.70 %
+INFO:root:
+Test set: Average loss: 0.0012, Accuracy: 7170/10000 (71.70%)
+
+INFO:root:#### Targetted Accuracy of truck : 70.92 %
+INFO:root:===> ND `|w_bad-w_g|` in local epoch: 2 | FL round: 5 |, is 1.8873143196105957
+INFO:root:@@@@@@@@ Working on client (global-index): 50, which 5-th user in the current round
+INFO:root:Effective lr in FL round: 5 is 0.01984047936032
+INFO:root:Train Epoch: 1 [0/282 (0%)]	Loss: 0.909351
+INFO:root:Train Epoch: 2 [0/282 (0%)]	Loss: 0.328085
+INFO:root:===> ND `|w_normal-w_g|` in local epoch: 2 | FL round: 5 |, is 1.9276975393295288
+INFO:root:@@@@@@@@ Working on client (global-index): 119, which 6-th user in the current round
+INFO:root:Effective lr in FL round: 5 is 0.01984047936032
+INFO:root:Train Epoch: 1 [0/500 (0%)]	Loss: 0.303253
+INFO:root:Train Epoch: 2 [0/500 (0%)]	Loss: 0.169078
+INFO:root:Accuracy of plane : 67.70 %
+INFO:root:Accuracy of   car : 74.90 %
+INFO:root:Accuracy of  bird : 58.50 %
+INFO:root:Accuracy of   cat : 38.90 %
+INFO:root:Accuracy of  deer : 77.40 %
+INFO:root:Accuracy of   dog : 60.50 %
+INFO:root:Accuracy of  frog : 88.10 %
+INFO:root:Accuracy of horse : 59.40 %
+INFO:root:Accuracy of  ship : 90.80 %
+INFO:root:Accuracy of truck : 71.30 %
+INFO:root:
+Test set: Average loss: 0.0012, Accuracy: 6875/10000 (68.75%)
+
+INFO:root:#### Targetted Accuracy of truck : 91.84 %
+INFO:root:===> ND `|w_bad-w_g|` in local epoch: 2 | FL round: 5 |, is 2.292149066925049
+INFO:root:@@@@@@@@ Working on client (global-index): 10, which 7-th user in the current round
+INFO:root:Effective lr in FL round: 5 is 0.01984047936032
+INFO:root:Train Epoch: 1 [0/264 (0%)]	Loss: 0.070909
+INFO:root:Train Epoch: 2 [0/264 (0%)]	Loss: 0.205103
+INFO:root:===> ND `|w_normal-w_g|` in local epoch: 2 | FL round: 5 |, is 2.069864511489868
+INFO:root:@@@@@@@@ Working on client (global-index): 117, which 8-th user in the current round
+INFO:root:Effective lr in FL round: 5 is 0.01984047936032
+INFO:root:Train Epoch: 1 [0/500 (0%)]	Loss: 0.271206
+INFO:root:Train Epoch: 2 [0/500 (0%)]	Loss: 0.027290
+INFO:root:Accuracy of plane : 67.30 %
+INFO:root:Accuracy of   car : 79.30 %
+INFO:root:Accuracy of  bird : 51.90 %
+INFO:root:Accuracy of   cat : 51.70 %
+INFO:root:Accuracy of  deer : 74.00 %
+INFO:root:Accuracy of   dog : 77.10 %
+INFO:root:Accuracy of  frog : 72.70 %
+INFO:root:Accuracy of horse : 76.10 %
+INFO:root:Accuracy of  ship : 84.40 %
+INFO:root:Accuracy of truck : 79.80 %
+INFO:root:
+Test set: Average loss: 0.0012, Accuracy: 7143/10000 (71.43%)
+
+INFO:root:#### Targetted Accuracy of truck : 93.37 %
+INFO:root:===> ND `|w_bad-w_g|` in local epoch: 2 | FL round: 5 |, is 1.993148684501648
+INFO:root:@@@@@@@@ Working on client (global-index): 122, which 9-th user in the current round
+INFO:root:Effective lr in FL round: 5 is 0.01984047936032
+INFO:root:Train Epoch: 1 [0/294 (0%)]	Loss: 1.171120
+INFO:root:Train Epoch: 2 [0/294 (0%)]	Loss: 0.467154
+INFO:root:===> ND `|w_normal-w_g|` in local epoch: 2 | FL round: 5 |, is 1.9591573476791382
+INFO:root:[foolsgold agg] wv: [0.91814717 1.         0.85591702 0.85591702 1.         1.
+ 1.         1.         1.         1.        ]
